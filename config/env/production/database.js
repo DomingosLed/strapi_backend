@@ -2,7 +2,8 @@ module.exports = ({ env }) => ({
     connection: {
       client: 'mysql',
       connection: {
-        host: '34.66.185.87',
+        //host: '34.66.185.87',
+        socketPath: `/cloudsql/${env('INSTANCE_CONNECTION_NAME')}`,
         database: env('DATABASE_NAME','axciona_strapi'),
         user: env('DATABASE_USER','root'),
         password: env('DATABASE_PASSWORD','Licassss5151'),
