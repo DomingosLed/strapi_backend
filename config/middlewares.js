@@ -1,6 +1,18 @@
 module.exports = [
   'strapi::errors',
-  'strapi::security',
+  {
+    name: "strapi::security",
+    config: {
+      ContentSecurityPolicy: {
+        useDefaults: true,
+        directives: {
+          'img-src': ["'self'", 'data:', 'blob:','https://storage.googleapis.com/staging.avid-infinity-370500.appspot.com'],
+          'media-src': ["'self'", 'data:', 'blob:','https://storage.googleapis.com/staging.avid-infinity-370500.appspot.com'],
+        }
+      },
+    },
+  },
+
   'strapi::cors',
   'strapi::poweredBy',
   'strapi::logger',
@@ -10,3 +22,6 @@ module.exports = [
   'strapi::favicon',
   'strapi::public',
 ];
+
+
+

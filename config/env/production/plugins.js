@@ -3,10 +3,10 @@ module.exports = {
         config: {
           provider: 'strapi-provider-upload-google-cloud-storage',
           providerOptions: {
-              bucketName: 'staging',
-              publicFiles: true,
+              bucketName: 'staging.avid-infinity-370500.appspot.com',
+              publicFiles: false,
               uniform: false,
-              basePath: '',
+              basePath: 'https://storage.googleapis.com',
           },
         },
       },
