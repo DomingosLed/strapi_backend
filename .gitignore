@@ -106,6 +106,8 @@ coverage
 ############################
 
 .env
+.env.local
+app.yaml
 license.txt
 exports
 *.cache
