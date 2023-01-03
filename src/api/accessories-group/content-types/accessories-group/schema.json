@@ -1,10 +1,11 @@
 {
   "kind": "collectionType",
-  "collectionName": "products",
+  "collectionName": "accessories_groups",
   "info": {
-    "singularName": "product",
-    "pluralName": "products",
-    "displayName": "Product"
+    "singularName": "accessories-group",
+    "pluralName": "accessories-groups",
+    "displayName": "Accessories Group",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -21,8 +22,7 @@
           "localized": true
         }
       },
-      "type": "string",
-      "required": true
+      "type": "string"
     },
     "description": {
       "pluginOptions": {
@@ -35,16 +35,15 @@
     "code": {
       "pluginOptions": {
         "i18n": {
-          "localized": false
+          "localized": true
         }
       },
-      "type": "string"
+      "type": "biginteger"
     },
-    "product_material": {
+    "accessories": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::product-material.product-material",
-      "mappedBy": "product"
+      "relation": "oneToMany",
+      "target": "api::accessory.accessory"
     }
   }
 }

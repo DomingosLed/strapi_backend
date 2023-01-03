@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "accessories",
+  "info": {
+    "singularName": "accessory",
+    "pluralName": "accessories",
+    "displayName": "Accessory",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "description": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
+    },
+    "code": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "biginteger"
+    },
+    "accessories_group": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::accessories-group.accessories-group"
+    },
+    "manufaturer": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::manufaturer.manufaturer"
+    },
+    "acessory_product_materials": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::acessory-product-material.acessory-product-material",
+      "mappedBy": "accessory"
+    }
+  }
+}

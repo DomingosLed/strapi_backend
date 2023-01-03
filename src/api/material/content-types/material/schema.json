@@ -31,6 +31,12 @@
         }
       },
       "type": "biginteger"
+    },
+    "product_material": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product-material.product-material",
+      "mappedBy": "material"
     }
   }
 }

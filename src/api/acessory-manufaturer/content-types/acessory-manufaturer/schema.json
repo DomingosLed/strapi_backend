@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "acessory_manufaturers",
+  "info": {
+    "singularName": "acessory-manufaturer",
+    "pluralName": "acessory-manufaturers",
+    "displayName": "Acessory-Manufaturer",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "manufaturer": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::manufaturer.manufaturer",
+      "inversedBy": "acessory_manufaturers"
+    },
+    "acessory_product": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::acessory-product-material.acessory-product-material",
+      "inversedBy": "acessories_manufaturers"
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "kind": "collectionType",
+  "collectionName": "acessory_product_materials",
+  "info": {
+    "singularName": "acessory-product-material",
+    "pluralName": "acessory-product-materials",
+    "displayName": "Acessory_Product",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "accessory": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::accessory.accessory",
+      "inversedBy": "acessory_product_materials"
+    },
+    "acessory_manufaturers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::acessory-manufaturer.acessory-manufaturer",
+      "mappedBy": "acessory_product_material"
+    },
+    "product_material": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::product-material.product-material",
+      "inversedBy": "acessory_product_materials"
+    },
+    "acessories_manufaturers": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::acessory-manufaturer.acessory-manufaturer",
+      "mappedBy": "acessory_product"
+    }
+  }
+}
