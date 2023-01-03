@@ -8,7 +8,7 @@
       database: env('DATABASE_NAME'),
       user: env('DATABASE_USER'),
       password: env('DATABASE_PASSWORD'),
-      port:  env('DATABASE_PORT'),
+      port:  env('DATABASE_PORT','3306'),
     },
   },
 }); 
