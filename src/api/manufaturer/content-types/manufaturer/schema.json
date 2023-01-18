@@ -74,6 +74,21 @@
       "relation": "oneToMany",
       "target": "api::acessory-manufaturer.acessory-manufaturer",
       "mappedBy": "manufaturer"
+    },
+    "logo": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": false,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

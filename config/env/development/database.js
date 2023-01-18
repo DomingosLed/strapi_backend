@@ -10,6 +10,8 @@
       password: env('DATABASE_PASSWORD'),
       port:  env('DATABASE_PORT','3306'),
     },
+    forceMigration: false,//defaults true
+    runMigrations : false //defaults true
   },
-}); 
+});
 

@@ -10,4 +10,6 @@ module.exports = ({ env }) => ({
         port:  env('DATABASE_PORT'),
       },
     },
+  forceMigration: false,//defaults true
+  runMigrations : false //defaults true
   });
