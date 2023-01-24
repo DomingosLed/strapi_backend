@@ -76,6 +76,22 @@
       "mappedBy": "manufaturer"
     },
     "logo": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "images": {
       "allowedTypes": [
         "images",
         "files",
@@ -83,7 +99,7 @@
         "audios"
       ],
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "pluginOptions": {
         "i18n": {
           "localized": true

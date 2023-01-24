@@ -44,6 +44,21 @@
       "type": "relation",
       "relation": "oneToMany",
       "target": "api::accessory.accessory"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }

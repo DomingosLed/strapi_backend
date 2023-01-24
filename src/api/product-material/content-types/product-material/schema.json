@@ -32,6 +32,16 @@
       "relation": "oneToMany",
       "target": "api::acessory-product-material.acessory-product-material",
       "mappedBy": "product_material"
+    },
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true
     }
   }
 }

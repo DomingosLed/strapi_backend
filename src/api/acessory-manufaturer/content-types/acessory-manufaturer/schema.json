@@ -30,11 +30,20 @@
       "target": "api::manufaturer.manufaturer",
       "inversedBy": "acessory_manufaturers"
     },
-    "acessory_product": {
-      "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::acessory-product-material.acessory-product-material",
-      "inversedBy": "acessories_manufaturers"
+    "images": {
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ],
+      "type": "media",
+      "multiple": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
