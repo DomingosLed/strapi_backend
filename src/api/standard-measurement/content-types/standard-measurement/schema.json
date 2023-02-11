@@ -1,0 +1,50 @@
+{
+  "kind": "collectionType",
+  "collectionName": "standard_measurements",
+  "info": {
+    "singularName": "standard-measurement",
+    "pluralName": "standard-measurements",
+    "displayName": "Standard_Measurement",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "width": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "height": {
+      "type": "integer",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
+    },
+    "standard_products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::standard-product.standard-product",
+      "mappedBy": "standard_measurements"
+    }
+  }
+}
