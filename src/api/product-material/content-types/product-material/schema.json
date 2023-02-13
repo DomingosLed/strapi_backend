@@ -96,11 +96,11 @@
       "target": "api::material-derivado.material-derivado",
       "inversedBy": "product_materials"
     },
-    "standard_product": {
+    "standard_measurements": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::standard-product.standard-product",
-      "inversedBy": "product_materials"
+      "relation": "manyToMany",
+      "target": "api::standard-measurement.standard-measurement",
+      "mappedBy": "product_materials"
     }
   }
 }

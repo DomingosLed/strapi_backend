@@ -32,12 +32,6 @@
         }
       }
     },
-    "standard_products": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::standard-product.standard-product",
-      "mappedBy": "standard_measurements"
-    },
     "name": {
       "pluginOptions": {
         "i18n": {
@@ -45,6 +39,12 @@
         }
       },
       "type": "string"
+    },
+    "product_materials": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product-material.product-material",
+      "inversedBy": "standard_measurements"
     }
   }
 }
