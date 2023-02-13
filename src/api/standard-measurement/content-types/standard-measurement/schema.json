@@ -32,19 +32,29 @@
         }
       }
     },
-    "name": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "string"
-    },
     "product_materials": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::product-material.product-material",
       "inversedBy": "standard_measurements"
+    },
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": false
+        }
+      },
+      "type": "string"
+    },
+    "meta": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "meta.metadata"
     }
   }
 }
