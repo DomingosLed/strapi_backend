@@ -13,5 +13,8 @@
     /*forceMigration: false,//defaults true
     runMigrations : false //defaults true*/
   },
+  settings: {
+    forceMigration: false,
+  },
 });
 
