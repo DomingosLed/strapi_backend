@@ -14,7 +14,7 @@
     runMigrations : false //defaults true*/
   },
   settings: {
-    forceMigration: false,
+    //forceMigration: false,
   },
 });
 

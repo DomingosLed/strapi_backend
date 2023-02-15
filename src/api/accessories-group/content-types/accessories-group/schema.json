@@ -4,7 +4,7 @@
   "info": {
     "singularName": "accessories-group",
     "pluralName": "accessories-groups",
-    "displayName": "Accessories Group",
+    "displayName": "Accessories_Group",
     "description": ""
   },
   "options": {
@@ -40,25 +40,27 @@
       },
       "type": "biginteger"
     },
-    "accessories": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::accessory.accessory"
-    },
     "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
-      "type": "media",
-      "multiple": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
+    },
+    "accessories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::accessory.accessory",
+      "mappedBy": "accessories_groups"
     }
   }
 }

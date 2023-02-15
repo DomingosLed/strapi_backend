@@ -40,36 +40,39 @@
       },
       "type": "biginteger"
     },
-    "accessories_group": {
+    "product_materials": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::accessories-group.accessories-group"
-    },
-    "manufaturer": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::manufaturer.manufaturer"
-    },
-    "acessory_product_materials": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::acessory-product-material.acessory-product-material",
-      "mappedBy": "accessory"
+      "relation": "manyToMany",
+      "target": "api::product-material.product-material",
+      "inversedBy": "accessories"
     },
     "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
-      "type": "media",
-      "multiple": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       }
+    },
+    "accessories_groups": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::accessories-group.accessories-group",
+      "inversedBy": "accessories"
+    },
+    "acessory_manufaturers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::acessory-manufaturer.acessory-manufaturer",
+      "mappedBy": "accessories"
     }
   }
 }

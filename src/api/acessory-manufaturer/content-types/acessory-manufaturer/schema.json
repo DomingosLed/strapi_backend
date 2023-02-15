@@ -4,8 +4,7 @@
   "info": {
     "singularName": "acessory-manufaturer",
     "pluralName": "acessory-manufaturers",
-    "displayName": "Acessory-Manufaturer",
-    "description": ""
+    "displayName": "Acessory_Manufaturer"
   },
   "options": {
     "draftAndPublish": true
@@ -26,24 +25,14 @@
     },
     "manufaturer": {
       "type": "relation",
-      "relation": "manyToOne",
-      "target": "api::manufaturer.manufaturer",
-      "inversedBy": "acessory_manufaturers"
+      "relation": "oneToOne",
+      "target": "api::manufaturer.manufaturer"
     },
-    "images": {
-      "allowedTypes": [
-        "images",
-        "files",
-        "videos",
-        "audios"
-      ],
-      "type": "media",
-      "multiple": true,
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      }
+    "accessories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::accessory.accessory",
+      "inversedBy": "acessory_manufaturers"
     }
   }
 }

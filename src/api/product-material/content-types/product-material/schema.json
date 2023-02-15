@@ -24,12 +24,6 @@
         }
       }
     },
-    "acessory_product_materials": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::acessory-product-material.acessory-product-material",
-      "mappedBy": "product_material"
-    },
     "images": {
       "type": "media",
       "multiple": true,
@@ -100,6 +94,12 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::standard-measurement.standard-measurement",
+      "mappedBy": "product_materials"
+    },
+    "accessories": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::accessory.accessory",
       "mappedBy": "product_materials"
     }
   }

@@ -64,17 +64,6 @@
       },
       "type": "string"
     },
-    "accessories": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::accessory.accessory"
-    },
-    "acessory_manufaturers": {
-      "type": "relation",
-      "relation": "oneToMany",
-      "target": "api::acessory-manufaturer.acessory-manufaturer",
-      "mappedBy": "manufaturer"
-    },
     "logo": {
       "type": "media",
       "multiple": false,
@@ -92,14 +81,15 @@
       }
     },
     "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos",
         "audios"
       ],
-      "type": "media",
-      "multiple": true,
       "pluginOptions": {
         "i18n": {
           "localized": true
