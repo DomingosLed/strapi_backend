@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "op_systems",
+  "info": {
+    "singularName": "op-system",
+    "pluralName": "op-systems",
+    "displayName": "Op_System",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "product_materials": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product-material.product-material",
+      "inversedBy": "op_systems"
+    },
+    "derivative_products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::derivative-product.derivative-product",
+      "inversedBy": "op_systems"
+    }
+  }
+}

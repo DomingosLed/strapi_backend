@@ -29,6 +29,12 @@
       "relation": "manyToMany",
       "target": "api::product-material.product-material",
       "mappedBy": "derivative_products"
+    },
+    "op_systems": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::op-system.op-system",
+      "mappedBy": "derivative_products"
     }
   }
 }
