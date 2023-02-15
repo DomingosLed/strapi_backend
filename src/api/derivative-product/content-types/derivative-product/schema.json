@@ -24,10 +24,11 @@
       },
       "type": "string"
     },
-    "product": {
+    "product_materials": {
       "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::product.product"
+      "relation": "manyToMany",
+      "target": "api::product-material.product-material",
+      "mappedBy": "derivative_products"
     }
   }
 }
