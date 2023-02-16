@@ -3,6 +3,7 @@ module.exports = {
         enabled: true,
         resolve: './src/plugins/my-plugin' // path to plugin folder
       }, */
+  
   graphql: {
     config: {
       endpoint: '/graphql',

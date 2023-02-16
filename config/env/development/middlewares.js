@@ -6,6 +6,7 @@ module.exports = [
       ContentSecurityPolicy: {
         useDefaults: true,
         directives: {
+          'connect-src': ["'self'", 'https:'],
           'img-src': ["'self'", 'data:', 'blob:','https://storage.googleapis.com/staging.avid-infinity-370500.appspot.com'],
           'media-src': ["'self'", 'data:', 'blob:','https://storage.googleapis.com/staging.avid-infinity-370500.appspot.com'],
           upgradeInsecureRequests: null,
