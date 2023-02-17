@@ -95,6 +95,18 @@
           "localized": true
         }
       }
+    },
+    "partners": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::partner.partner",
+      "mappedBy": "manufaturers"
+    },
+    "product_materials": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product-material.product-material",
+      "inversedBy": "manufaturers"
     }
   }
 }

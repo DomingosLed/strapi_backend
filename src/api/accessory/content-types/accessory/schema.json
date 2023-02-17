@@ -62,17 +62,17 @@
         }
       }
     },
-    "accessories_groups": {
+    "accessory_groups": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::accessories-group.accessories-group",
       "inversedBy": "accessories"
     },
-    "acessory_manufaturers": {
+    "accessory_models": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::acessory-manufaturer.acessory-manufaturer",
-      "mappedBy": "accessories"
+      "inversedBy": "accessories"
     }
   }
 }

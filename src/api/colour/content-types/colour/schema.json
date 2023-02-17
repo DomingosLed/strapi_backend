@@ -1,10 +1,10 @@
 {
   "kind": "collectionType",
-  "collectionName": "accessories_groups",
+  "collectionName": "colours",
   "info": {
-    "singularName": "accessories-group",
-    "pluralName": "accessories-groups",
-    "displayName": "Accessory_Group",
+    "singularName": "colour",
+    "pluralName": "colours",
+    "displayName": "Product_Colour",
     "description": ""
   },
   "options": {
@@ -17,30 +17,14 @@
   },
   "attributes": {
     "name": {
+      "type": "string",
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
-      },
-      "type": "string"
+      }
     },
-    "description": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "richtext"
-    },
-    "code": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "biginteger"
-    },
-    "images": {
+    "colour": {
       "type": "media",
       "multiple": true,
       "required": false,
@@ -60,13 +44,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::product-material.product-material",
-      "inversedBy": "accessories_groups"
-    },
-    "accessories": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::accessory.accessory",
-      "mappedBy": "accessory_groups"
+      "inversedBy": "product_colours"
     }
   }
 }

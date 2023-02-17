@@ -26,6 +26,12 @@
       "relation": "manyToMany",
       "target": "api::derivative-product.derivative-product",
       "inversedBy": "op_systems"
+    },
+    "derivative_opsystems": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::derivative-opsystem.derivative-opsystem",
+      "mappedBy": "op_systems"
     }
   }
 }

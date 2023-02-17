@@ -1,0 +1,48 @@
+{
+  "kind": "collectionType",
+  "collectionName": "partners",
+  "info": {
+    "singularName": "partner",
+    "pluralName": "partners",
+    "displayName": "Partner",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "contact": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "manufaturers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::manufaturer.manufaturer",
+      "inversedBy": "partners"
+    },
+    "product_materials": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product-material.product-material",
+      "inversedBy": "partners"
+    }
+  }
+}
