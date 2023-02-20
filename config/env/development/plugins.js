@@ -1,9 +1,13 @@
 module.exports = {
-   /*  'reviews': {
-        enabled: true,
-        resolve: './src/plugins/my-plugin' // path to plugin folder
-      }, */
-  
+  /*  'reviews': {
+       enabled: true,
+       resolve: './src/plugins/my-plugin' // path to plugin folder
+     }, */
+  'strapi-plugin-populate-deep': {
+    config: {
+      defaultDepth: 3, // Default is 5
+    }
+  },
   graphql: {
     config: {
       endpoint: '/graphql',

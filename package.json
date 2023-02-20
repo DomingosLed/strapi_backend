@@ -8,6 +8,7 @@
     "mysql": "2.18.1",
     "pg": "^8.8.0",
     "strapi-plugin-entity-relationship-chart": "^4.1.0",
+    "strapi-plugin-populate-deep": "^2.0.0",
     "strapi-plugin-todo": "^0.0.9",
     "strapi-provider-upload-google-cloud-storage": "^4.0.0"
   },
