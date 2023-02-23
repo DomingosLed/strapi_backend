@@ -56,12 +56,6 @@
         }
       }
     },
-    "product_materials": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::product-material.product-material",
-      "inversedBy": "accessories_groups"
-    },
     "accessories": {
       "type": "relation",
       "relation": "manyToMany",

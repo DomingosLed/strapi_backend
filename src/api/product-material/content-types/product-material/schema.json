@@ -126,12 +126,6 @@
       "target": "api::manufaturer.manufaturer",
       "mappedBy": "product_materials"
     },
-    "accessories_groups": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::accessories-group.accessories-group",
-      "mappedBy": "product_materials"
-    },
     "product_colours": {
       "type": "relation",
       "relation": "manyToMany",
