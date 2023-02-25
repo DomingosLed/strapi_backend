@@ -3,6 +3,9 @@ module.exports = {
        enabled: true,
        resolve: './src/plugins/my-plugin' // path to plugin folder
      }, */
+     "strapi-chatgpt": {
+      enabled: true,
+    },
   'strapi-plugin-populate-deep': {
     config: {
       defaultDepth: 3, // Default is 5
