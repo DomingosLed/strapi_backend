@@ -7,7 +7,7 @@
 			"path": "../strapi_frontend"
 		},
 		{
-			"path": "../aluminiumAstro"
+			"path": "../astro/aluminiumAstro"
 		}
 	]
 }
