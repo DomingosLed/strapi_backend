@@ -61,6 +61,12 @@
       "relation": "manyToMany",
       "target": "api::accessory.accessory",
       "mappedBy": "accessory_groups"
+    },
+    "planner_steps": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::planner-step.planner-step",
+      "mappedBy": "accessory_groups"
     }
   }
 }

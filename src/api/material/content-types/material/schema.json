@@ -72,6 +72,12 @@
       "components": [
         "meta.metadata"
       ]
+    },
+    "manufaturers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::manufaturer.manufaturer",
+      "mappedBy": "materials"
     }
   }
 }

@@ -45,6 +45,14 @@
       "relation": "manyToMany",
       "target": "api::product-material.product-material",
       "inversedBy": "product_colours"
+    },
+    "rgb": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }

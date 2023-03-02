@@ -107,6 +107,12 @@
       "relation": "manyToMany",
       "target": "api::product-material.product-material",
       "inversedBy": "manufaturers"
+    },
+    "materials": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::material.material",
+      "inversedBy": "manufaturers"
     }
   }
 }

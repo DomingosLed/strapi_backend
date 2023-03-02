@@ -1,0 +1,40 @@
+{
+  "kind": "collectionType",
+  "collectionName": "planner_steps",
+  "info": {
+    "singularName": "planner-step",
+    "pluralName": "planner-steps",
+    "displayName": "Planner_Step",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
+  "attributes": {
+    "planners": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::planner.planner",
+      "mappedBy": "planner_steps"
+    },
+    "name": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "accessory_groups": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::accessories-group.accessories-group",
+      "inversedBy": "planner_steps"
+    }
+  }
+}

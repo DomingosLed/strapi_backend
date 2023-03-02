@@ -137,6 +137,18 @@
       "relation": "manyToMany",
       "target": "api::acabamento.acabamento",
       "mappedBy": "product_materials"
+    },
+    "suppliers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::supplier.supplier",
+      "mappedBy": "product_materials"
+    },
+    "planners": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::planner.planner",
+      "mappedBy": "product_materials"
     }
   }
 }
