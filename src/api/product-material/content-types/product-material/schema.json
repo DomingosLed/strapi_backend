@@ -96,12 +96,6 @@
       "target": "api::standard-measurement.standard-measurement",
       "mappedBy": "product_materials"
     },
-    "accessories": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::accessory.accessory",
-      "mappedBy": "product_materials"
-    },
     "derivative_products": {
       "type": "relation",
       "relation": "manyToMany",
@@ -126,12 +120,6 @@
       "target": "api::manufaturer.manufaturer",
       "mappedBy": "product_materials"
     },
-    "product_colours": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::colour.colour",
-      "mappedBy": "product_materials"
-    },
     "acabamentos": {
       "type": "relation",
       "relation": "manyToMany",
@@ -148,6 +136,12 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::planner.planner",
+      "mappedBy": "product_materials"
+    },
+    "accessory_groups": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::accessories-group.accessories-group",
       "mappedBy": "product_materials"
     }
   }

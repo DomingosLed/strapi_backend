@@ -56,17 +56,29 @@
         }
       }
     },
-    "accessories": {
+    "acessory_attributes": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::accessory.accessory",
-      "mappedBy": "accessory_groups"
+      "inversedBy": "accessory_groups"
     },
     "planner_steps": {
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::planner-step.planner-step",
       "mappedBy": "accessory_groups"
+    },
+    "accessory_models": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::acessory-manufaturer.acessory-manufaturer",
+      "mappedBy": "accessory_groups"
+    },
+    "product_materials": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product-material.product-material",
+      "inversedBy": "accessory_groups"
     }
   }
 }

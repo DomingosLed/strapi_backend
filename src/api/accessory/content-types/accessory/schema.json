@@ -4,7 +4,7 @@
   "info": {
     "singularName": "accessory",
     "pluralName": "accessories",
-    "displayName": "Accessory",
+    "displayName": "Accessory_Attributes",
     "description": ""
   },
   "options": {
@@ -32,20 +32,6 @@
       },
       "type": "richtext"
     },
-    "code": {
-      "pluginOptions": {
-        "i18n": {
-          "localized": true
-        }
-      },
-      "type": "biginteger"
-    },
-    "product_materials": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::product-material.product-material",
-      "inversedBy": "accessories"
-    },
     "images": {
       "type": "media",
       "multiple": true,
@@ -66,13 +52,7 @@
       "type": "relation",
       "relation": "manyToMany",
       "target": "api::accessories-group.accessories-group",
-      "inversedBy": "accessories"
-    },
-    "accessory_models": {
-      "type": "relation",
-      "relation": "manyToMany",
-      "target": "api::acessory-manufaturer.acessory-manufaturer",
-      "inversedBy": "accessories"
+      "mappedBy": "acessory_attributes"
     }
   }
 }
