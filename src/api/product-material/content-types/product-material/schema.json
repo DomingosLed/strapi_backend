@@ -143,6 +143,14 @@
       "relation": "manyToMany",
       "target": "api::accessories-group.accessories-group",
       "mappedBy": "product_materials"
+    },
+    "how_to_care": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "richtext"
     }
   }
 }
